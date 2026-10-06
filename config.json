@@ -1,0 +1,74 @@
+{
+  "schemaVersion": 1,
+  "configVersion": "1.0.0",
+  "minimumExtensionVersion": "1.4.0",
+  "generatedAt": "2026-10-06T00:00:00Z",
+  "expiresAt": "2027-01-06T00:00:00Z",
+  "channel": "stable",
+  "notes": "Baseline config: selectors + matching tunables verified against olm.vn UI (lit default-root + legacy data-id).",
+  "features": {
+    "remoteTunables": true,
+    "answerDomSelectors": true,
+    "panelUiLabels": true,
+    "compatibilityMap": true
+  },
+  "selectors": {
+    "quizHost": "default-root",
+    "quizHostFallbackPattern": "quiz|question|true-fasle|true-false|advance|order|sort",
+    "mcOption": ".qselect,[class*=\"qselect\"]",
+    "tfRow": "tr.tf-row,.tf-row",
+    "mcBlock": "#quiz-list,.answer-container.quiz-list,.answer-container,.quiz-list,.previewquiz",
+    "tfBlock": "#true-false",
+    "legacyBlock": "[data-id-quiz],[data-id_quiz],[data-idquiz],[data-question-id],[data-idquestion],[data-qid],[data-question],[data-questionid],[data-quiz]:not([data-stt]),[data-quiz-id],[data-id]",
+    "legacyRoot": "#question,div.question",
+    "legacyOption": ".qselect,.correctAnswer,[ind],[data-ind],li,td,label,[class*=\"option\"],[class*=\"choice\"]",
+    "answerDom": ".qselect.correctq,div.qselect.qcorrect,[class*=\"qselect\"].correctq,.qselect[data-correct=\"true\"],[ind].correctq,.qiradio.xcorrect,.xcorrect,[class*=\"xcorrect\"],.correctAnswer,.correct-answer,[data-correct=\"true\"],[data-correct=\"1\"],[data-is-correct=\"true\"],.is-correct,.answer-correct,.answer.true,.answer--correct,.quiz-answer.correct,.item-correct,.dap-an-dung,.true-answer,[class*=\"correctAnswer\"],[class*=\"answer-correct\"],[data-solution],[data-dap-an],.olm-correct,.quiz-correct,.item--correct,.match-correct,.pair-correct,[data-answer],[data-blank-answer],[data-accept],input[data-accept],textarea[data-accept],.drag-result,.drop-result,.fill-result,[class*=\"dap-an-dung\"],.answer-filled,.blank-filled,.slot-filled,.correct-option,.selected-answer.correct,[data-state=\"correct\"],.choice.correct,.option.correct,[class*=\"correct-choice\"],[class*=\"right-answer\"],.answer-key,.model-answer,.sample-answer,.gap-answer,.blank-answer,[class*=\"gap-fill\"],.word-answer,.fill-answer,.match-answer,.pair-answer,.correct-pair",
+    "stripDisplay": "ol.quiz-list,ul.quiz-list,.quiz-list,.interaction,.form-group,.loigiai,.huong-dan-giai,.explain,.solution,#solution,.guide,.exp,.quiz-option,.quiz-item,.quiz-answer,.q-option,.answer-option,.ds-dapan,.list-dapan,.list-group-item,[class*=\"quiz-option\"],[class*=\"quiz_item\"],[class*=\"answer-list\"],[class*=\"list-answer\"],[class*=\"match\"],[class*=\"ghep\"],[class*=\"pair-list\"],[class*=\"drag-drop\"],[class*=\"olm-match\"],.cau-ghep-noi,.match-quiz"
+  },
+  "matching": {
+    "chipMaxText": 90,
+    "rearmCyclesMax": 6,
+    "tfListNamePattern": "true[\\s-]?f(?:a|)lse|true[\\s-]?false|dung[\\s-]?sai"
+  },
+  "ui": {
+    "qtypeLabels": {
+      "mc": {
+        "text": "Trắc nghiệm",
+        "cls": "olm-qtype-mc"
+      },
+      "tf": {
+        "text": "Đúng / Sai",
+        "cls": "olm-qtype-tf"
+      },
+      "fill": {
+        "text": "Điền / Word Form",
+        "cls": "olm-qtype-fill"
+      },
+      "match": {
+        "text": "Ghép nối / Matching",
+        "cls": "olm-qtype-match"
+      },
+      "order": {
+        "text": "Sắp xếp / Reorder",
+        "cls": "olm-qtype-order"
+      },
+      "essay": {
+        "text": "Tự luận / Writing",
+        "cls": "olm-qtype-essay"
+      },
+      "unknown": {
+        "text": "?",
+        "cls": "olm-qtype-mc"
+      }
+    }
+  },
+  "compatibility": {
+    "olmDomains": [
+      "olm.vn"
+    ],
+    "knownUiVariants": [
+      "lit-default-root",
+      "legacy-data-id"
+    ]
+  }
+}
